@@ -1,0 +1,8 @@
+baseurl = "http://amirrezaghaderi.com/"
+languageCode = "en-US"
+title = "Amirreza Ghaderi"
+Paginate = 10
+disqusShortname = "amirrezablog"
+
+[indexes]
+tag = "topic"

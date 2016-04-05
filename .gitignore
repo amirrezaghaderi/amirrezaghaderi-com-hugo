@@ -1,0 +1,5 @@
+.DS*
+
+public/*
+!public/readme.md
+

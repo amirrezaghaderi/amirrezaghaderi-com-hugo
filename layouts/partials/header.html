@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+<meta charset="utf-8">
+<title>{{.Title}} | Amirreza's blog</title>
+
+{{ if .Params.postdesc }}
+<meta name="description" content="{{.Params.postdesc}}"/>
+{{ else }}
+<meta name="description" content="A software developer who enjoys problem solving and creating useful things with computers!"/>
+{{ end }}
+<meta name="viewport"    content="width=device-width, initial-scale=1">
+<meta name="author"      content="Amirreza Ghaderi">
+<meta name="robots"      content="INDEX,FOLLOW">
+<meta name="keywords"    content="code, erlang, elixir, functional programming, concurrent, linux, unix, terminal, web">
+
+<link rel="stylesheet"    href="{{.Site.BaseURL}}static/css/style-max.css" type="text/css"/>
+<link rel="shortcut icon" type="image/png" href="{{.Site.BaseURL}}favicon.png">
+<link rel="alternate"     href="{{.Site.BaseURL}}index.xml" type="application/rss+xml" title="Amirreza's blog"/>
+
+<script type="text/javascript">
+if("querySelector"in document&&"addEventListener"in window&&"classList"in document.documentElement){}else{window.location="{{.Site.BaseURL}}/old-browser.html"}
+</script>
+
+<!-- include analytic -->
+
+</head>
+
+<body>
+
+<div id="page" class="hfeed site">
+
+<header id="page-header" class="page-header" role="banner">
+<nav id="page-nav" class="page-nav" role="navigation">
+ <a id="menu-btn" class='menu-btn' href="#menu">Menu</a>
+ <div id="side-menu" class="menu">
+  <ul>
+   <li class="first-item current_page_item"><a href="{{.Site.BaseURL}}">Blog index</a></li>
+   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}topic/">Browse by Topic...</a></li>
+   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}about/">About</a></li>
+   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}contact/">Contact</a></li>
+   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}index.xml">Feed</a></li>
+   <li class="search-form"></li>
+  </ul>
+ </div>
+</nav>
+</header><!-- end header -->
+
+<div id="content" class="site-content">
+<div id="primary" class="content-area">
+<main id="main" class="site-main" role="main">

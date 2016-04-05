@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<div class="entry-header">
+ <h1 class="entry-title"><a rel="bookmark" href="{{.Site.BaseURL}}">Amirreza's blog</a></h1>
+ <p class="entry-desc">A software developer who enjoys problem solving and creating useful things with computers!</p>
+</div>
+
+<ul class="blog-index">
+{{ range (where .Paginator.Pages ".Params.singlepage" "!=" "true") }}
+{{ .Render "li" }}
+{{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}
+
+
+
