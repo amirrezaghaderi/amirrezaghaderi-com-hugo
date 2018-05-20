@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<div class="center bb-bold-black">
+  <h1 class="f1 pt15">
+    <a class="black" rel="bookmark" href="{{.Site.BaseURL}}">Amirreza Ghaderi</a>
+  </h1>
+  <p class="f5 gray2 pb10">Blog index</p>
+</div>
+
+<ul class="nobullet">
+{{ range (where .Paginator.Pages ".Params.singlepage" "!=" "true") }}
+{{ .Render "li" }}
+{{ end }}
+</ul>
+
+{{ template "_internal/pagination.html" . }}
+
+{{ partial "footer.html" . }}

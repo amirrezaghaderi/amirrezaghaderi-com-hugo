@@ -1,8 +1,11 @@
-baseurl = "http://amirrezaghaderi.com/"
+baseurl = "https://amirrezaghaderi.com/"
 languageCode = "en-US"
 title = "Amirreza Ghaderi"
-Paginate = 10
+Paginate = 30
 disqusShortname = "amirrezablog"
+
+pygmentsUseClasses = true
+pygmentsCodeFences = true
 
 [indexes]
 tag = "topic"

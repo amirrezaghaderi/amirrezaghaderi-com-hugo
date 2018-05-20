@@ -1,4 +1,5 @@
-<li class="blog-index-entry">
- <a class="blog-index-title" href="{{ .Permalink }}">{{ .Title }}</a><br>
- <span class="blog-index-date">{{ .Date.Format "January 2, 2006" }}</span>
+<li class="pb30">
+ <a class="black fh-red f3" href="{{ .Permalink }}">{{ .Title }}</a><br>
+ <span class="f5" style="color:#bbb">{{.Params.postdesc}}</span><br>
+ <span class="gray2">{{ .Params.jdate }}</span>
 </li>

@@ -2,19 +2,24 @@
 <html lang="{{.Site.LanguageCode}}">
 <head>
 <meta charset="utf-8">
-<title>{{.Title}} | Amirreza's blog</title>
-
+<title>{{.Title}} | Blog | Amirreza Ghaderi</title>
 {{ if .Params.postdesc }}
 <meta name="description" content="{{.Params.postdesc}}"/>
 {{ else }}
-<meta name="description" content="A software developer who enjoys problem solving and creating useful things with computers!"/>
+<meta name="description" content="وبلاگ شخصی امیررضا قادری، توسعه دهنده‌ی نرم افزار و سرویس های مبتنی بر وب"/>
+{{ end }}
+{{ if .Params.postkeywords }}
+<meta name="keywords"    content="{{.Params.postkeywords}}"/>
+{{ else }}
+<meta name="keywords"    content="برنامه نویسی, برنامه‌نویسی, کد, همروند, وب, ارلنگ, الیکسیر, فانکشنال, پایتون, گولنگ, لینوکس, یونیکس, موازی, شبکه">
 {{ end }}
 <meta name="viewport"    content="width=device-width, initial-scale=1">
 <meta name="author"      content="Amirreza Ghaderi">
 <meta name="robots"      content="INDEX,FOLLOW">
-<meta name="keywords"    content="code, erlang, elixir, functional programming, concurrent, linux, unix, terminal, web">
 
-<link rel="stylesheet"    href="{{.Site.BaseURL}}static/css/style-min.css" type="text/css"/>
+<link rel="stylesheet"    href="{{.Site.BaseURL}}static/css/style.css" type="text/css"/>
+<link rel="stylesheet"    href="{{.Site.BaseURL}}static/css/solarized-light.css" type="text/css"/>
+
 <link rel="shortcut icon" type="image/png" href="{{.Site.BaseURL}}favicon.png">
 <link rel="alternate"     href="{{.Site.BaseURL}}index.xml" type="application/rss+xml" title="Amirreza's blog"/>
 
@@ -28,24 +33,23 @@ if("querySelector"in document&&"addEventListener"in window&&"classList"in docume
 
 <body>
 
-<div id="page" class="hfeed site">
+<div id="page" class="site">
 
-<header id="page-header" class="page-header" role="banner">
-<nav id="page-nav" class="page-nav" role="navigation">
- <a id="menu-btn" class='menu-btn' href="#menu">Menu</a>
- <div id="side-menu" class="menu">
-  <ul>
-   <li class="first-item current_page_item"><a href="{{.Site.BaseURL}}">Blog index</a></li>
-   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}topic/">Browse by Topic...</a></li>
-   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}about/">About</a></li>
-   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}contact/">Contact</a></li>
-   <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}index.xml">Feed</a></li>
-   <li class="search-form"></li>
-  </ul>
- </div>
+<header id="page-header" class="h100" role="banner">
+<nav id="side-menu" class="side-menu" role="navigation">
+  <a id="side-menu-btn" class='side-menu-btn white bg-red bh-black p15 w100 block' href="#menu">Menu</a>
+  <div id="side-menu-list" class="side-menu-list">
+    <ul>
+      <li><a href="{{.Site.BaseURL}}">Home</a></li>
+      <li><a href="{{.Site.BaseURL}}blog/">Blog index</a></li>
+      <li><a href="{{.Site.BaseURL}}topic/">Browse by Topic...</a></li>
+      <li><a href="{{.Site.BaseURL}}contact/">Contact</a></li>
+      <li><a href="{{.Site.BaseURL}}index.xml">Feed</a></li>
+    </ul>
+  </div>
 </nav>
 </header><!-- end header -->
 
-<div id="content" class="site-content">
-<div id="primary" class="content-area">
-<main id="main" class="site-main" role="main">
+<div id="content" class="pb120">
+<div id="primary" class="">
+<main id="main" class="main w850 middle" role="main">
