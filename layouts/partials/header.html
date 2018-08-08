@@ -3,15 +3,17 @@
 <head>
 <meta charset="utf-8">
 <title>{{.Title}} | Blog | Amirreza Ghaderi</title>
+
 {{ if .Params.postdesc }}
 <meta name="description" content="{{.Params.postdesc}}"/>
 {{ else }}
-<meta name="description" content="وبلاگ شخصی امیررضا قادری، توسعه دهنده‌ی نرم افزار و سرویس های مبتنی بر وب"/>
+<meta name="description" content="This is the personal website of Amirreza Ghaderi. I'm a polyglot software developer."/>
 {{ end }}
+
 {{ if .Params.postkeywords }}
 <meta name="keywords"    content="{{.Params.postkeywords}}"/>
 {{ else }}
-<meta name="keywords"    content="برنامه نویسی, برنامه‌نویسی, کد, همروند, وب, ارلنگ, الیکسیر, فانکشنال, پایتون, گولنگ, لینوکس, یونیکس, موازی, شبکه">
+<meta name="keywords"    content="programming, python, php, java, golang, rust, javascript, unix, concurrent, web, code">
 {{ end }}
 <meta name="viewport"    content="width=device-width, initial-scale=1">
 <meta name="author"      content="Amirreza Ghaderi">
@@ -24,7 +26,12 @@
 <link rel="alternate"     href="{{.Site.BaseURL}}index.xml" type="application/rss+xml" title="Amirreza's blog"/>
 
 <script type="text/javascript">
-if("querySelector"in document&&"addEventListener"in window&&"classList"in document.documentElement){}else{window.location="{{.Site.BaseURL}}/old-browser.html"}
+if ( "querySelector" in document
+  && "addEventListener" in window
+  && "classList" in document.documentElement ) {
+  }else{ 
+    window.location="{{.Site.BaseURL}}old-browser.html"
+}
 </script>
 
 <!-- include analytic -->
@@ -44,6 +51,7 @@ if("querySelector"in document&&"addEventListener"in window&&"classList"in docume
       <li><a href="{{.Site.BaseURL}}blog/">Blog index</a></li>
       <li><a href="{{.Site.BaseURL}}topic/">Browse by Topic...</a></li>
       <li><a href="{{.Site.BaseURL}}contact/">Contact</a></li>
+      <li><a href="{{.Site.BaseURL}}about/">About</a></li>
       <li><a href="{{.Site.BaseURL}}index.xml">Feed</a></li>
     </ul>
   </div>

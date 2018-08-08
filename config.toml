@@ -2,6 +2,7 @@ baseurl = "https://amirrezaghaderi.com/"
 languageCode = "en-US"
 title = "Amirreza Ghaderi"
 Paginate = 30
+publishdir = "../amirrezaghaderi.com"
 disqusShortname = "amirrezablog"
 
 pygmentsUseClasses = true
