@@ -1,4 +1,4 @@
 #!/bin/sh
 
-rm -rf ./public/*
+rm -rf ../amirrezaghaderi.com/*
 hugo
